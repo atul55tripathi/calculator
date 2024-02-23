@@ -9,7 +9,7 @@ public class test {
         double val = 16.0;
         double expectedResult = 4.0;
         double result = Main.squareRoot(val);
-        Assert.assertEquals(expectedResult, result, 0.0f);
+        Assert.assertEquals(expectedResult, result, 0.0f); //
     }
 
     @Test
