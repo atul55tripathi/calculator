@@ -1,21 +1,22 @@
 package org.example;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 import java.util.Scanner;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) {
         logger.info("The calculator program. Now with many many DevOp tools behind it");
-        //some changes
+
         Scanner reader = new Scanner(System.in);
-        int op, flag=0;
+        int op, flag = 0;
         double num, exp;
         int numm;
 
-        do{
+        do {
             System.out.println("------------Calculator--------------");
             System.out.println("Choices of Operations:");
             System.out.println("");
@@ -25,16 +26,12 @@ public class Main {
             System.out.println("4. Power");
             System.out.println("5. Exit");
             System.out.println("");
-<<<<<<< HEAD
             System.out.print("Enter your choice(number): ");
-=======
-            System.out.print("Enter your choice(number): "); //to pick 
->>>>>>> origin/main
             System.out.println("");
             op = reader.nextInt();
-            if(op==5) flag = 1;
-            else{
-                switch(op){
+            if (op == 5) flag = 1;
+            else {
+                switch (op) {
 
                     case 1:  // Square Root
                         System.out.println("You choose Square Root!!");
@@ -67,7 +64,7 @@ public class Main {
                         num = reader.nextDouble();
                         System.out.print("exponent: ");
                         exp = reader.nextDouble();
-                        power(num,exp);
+                        power(num, exp);
                         break;
 
                     default:
@@ -75,39 +72,41 @@ public class Main {
                         flag = 1;
                 }
             }
-        }while(flag == 0);
+        } while (flag == 0);
     }
 
-    public static double squareRoot(double num){
+    public static double squareRoot(double num) {
         double c = Math.sqrt(num);
         System.out.println("");
-        System.out.println("The Result is "+c);
+        System.out.println("The Result is " + c);
         System.out.println("");
         logger.info("Executing squareRoot function!");
         return c;
     }
 
-    public static int factorial(int num){
-        int c = num ;
-        for(int i=num-1; i>=1; i--) c = c*i;
+    public static int factorial(int num) {
+        int c = num;
+        for (int i = num - 1; i >= 1; i--) c = c * i;
         System.out.println("");
-        System.out.println("The Result is "+c);
+        System.out.println("The Result is " + c);
         System.out.println("");
         logger.info("Executing Factorial function!");
         return c;
     }
-    public static double naturalLog(double num){
+
+    public static double naturalLog(double num) {
         double c = Math.log(num);
         System.out.println("");
-        System.out.println("The Result is "+ c);
+        System.out.println("The Result is " + c);
         System.out.println("");
         logger.info("Executing naturalLog function!");
         return c;
     }
-    public static double power(double num, double exp){
-        double c = Math.pow(num,exp);
+
+    public static double power(double num, double exp) {
+        double c = Math.pow(num, exp);
         System.out.println("");
-        System.out.println("The Result is "+ c);
+        System.out.println("The Result is " + c);
         System.out.println("");
         logger.info("Executing Power function!");
         return c;
