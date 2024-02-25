@@ -25,7 +25,11 @@ public class Main {
             System.out.println("4. Power");
             System.out.println("5. Exit");
             System.out.println("");
+<<<<<<< HEAD
             System.out.print("Enter your choice(number): ");
+=======
+            System.out.print("Enter your choice(number): "); //to pick 
+>>>>>>> origin/main
             System.out.println("");
             op = reader.nextInt();
             if(op==5) flag = 1;
